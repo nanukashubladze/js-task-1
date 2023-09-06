@@ -39,20 +39,24 @@ checkNum(3)
 
 
 4. 
- const car = {
-  year : 2023,
-  model: "Toyota",
- }
- function findAge(){
+function findCarYear(carObject) {
+  return carObject && carObject.year ? carObject.year : "Car year not found";
+}
 
- }
+const car = {
+  year: 2023,
+  model: "Toyota",
+};
+
+const carYear = findCarYear(car);
+console.log(carYear);
 
 5.
 
-  let arr = [1, 4, 88, 99,123];
+const arr = [1, 4, 88, 99,123];
   const max = Math.max(...arr);
 
-  console.log(max)
+console.log(max);
 
 
 6.
