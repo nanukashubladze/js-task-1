@@ -11,7 +11,7 @@ function checkNumber(num){
     
   }
 }
-checkNumber(0)
+checkNumber(    0)
 
 2. 
 
@@ -39,42 +39,74 @@ checkNum(3)
 
 
 4. 
-function findCarYear(carObject) {
-  return carObject && carObject.year ? carObject.year : "Car year not found";
-}
-
 const car = {
-  year: 2023,
+  year: 1995,
   model: "Toyota",
 };
 
-const carYear = findCarYear(car);
-console.log(carYear);
+function calculateAge(car) {
+  const currentYear = new Date().getFullYear();
+  const carAge = currentYear - car.year;
+  return carAge;
+}
+
+const carAge = calculateAge(car);
+console.log(carAge);
+
+// function findCarYear(carObject) {
+//   return carObject && carObject.year ? carObject.year : "Car year not found";
+// }
+
+// const car = {
+//   year: 2023,
+//   model: "Toyota",
+// };
+
+// const carYear = findCarYear(car);
+// console.log(carYear);
 
 5.
 
-// const arr = [1, 4, 88, 99,123];
-//   const max = Math.max(...arr);
 
-// console.log(max);
 function findMax(arr) {
   if (arr.length === 0) {
     return undefined; 
   }
+  let max = arr[0];
 
-  return Math.max(...arr);
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+        max = arr[i]; 
+    }
+}
+
+return max;
 }
 
 const numbers = [1, 4, 88, 99,123];
 const maxNumber = findMax(numbers);
-console.log("Maximum number:", maxNumber);
+console.log(maxNumber);
 
 
 6.
-const arr2 = [1, 4, 88, 99,123];
-  const min = Math.min(...arr2);
+function findMin(arr) {
+  if (arr.length === 0) {
+    return undefined; 
+  }
+  let min = arr[0];
 
-console.log(min);
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < min) {
+        min = arr[i]; 
+    }
+}
+
+return min;
+}
+
+const numbers1 = [1, 4, 88, 99,123];
+const minNumber = findMin(numbers);
+console.log(minNumber);
 
 
 
