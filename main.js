@@ -2,16 +2,16 @@
 let num = 0;
 
 function checkNumber(num){
-  if(num === 0){
-    console.log("0 მთელი რიცხვია")
-  } else if(num %3 === 0){
+  if(num < 0){
     console.log("უარყოფითია")
-  } else{
+  } else if(num > 0){
     console.log("დადებითია")
+  } else{
+    console.log("0 არც დადებითია არც უარყოფითი :D")
     
   }
 }
-checkNumber(20)
+checkNumber(0)
 
 2. 
 
@@ -53,15 +53,26 @@ console.log(carYear);
 
 5.
 
-const arr = [1, 4, 88, 99,123];
-  const max = Math.max(...arr);
+// const arr = [1, 4, 88, 99,123];
+//   const max = Math.max(...arr);
 
-console.log(max);
+// console.log(max);
+function findMax(arr) {
+  if (arr.length === 0) {
+    return undefined; 
+  }
+
+  return Math.max(...arr);
+}
+
+const numbers = [1, 4, 88, 99,123];
+const maxNumber = findMax(numbers);
+console.log("Maximum number:", maxNumber);
 
 
 6.
 const arr2 = [1, 4, 88, 99,123];
-  const min = Math.min(...arr);
+  const min = Math.min(...arr2);
 
 console.log(min);
 
